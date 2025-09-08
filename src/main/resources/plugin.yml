@@ -1,23 +1,25 @@
 name: DailyTracker
-version: 1.0.0
+version: '${project.version}'
 main: com.niranjan0.dailytracker.DailyTracker
-author: Niranjan0
 api-version: 1.21
-softdepend: [PlaceholderAPI, Essentials]
+author: Niranjan0
+description: Track player uptime and server downtime
+website: https://github.com/Niranjan0
+depend: [PlaceholderAPI]
 
 commands:
   dat:
-    description: Main command for DailyTracker
-    usage: /<command> <subcommand>
-    aliases: [dailytracker]
+    description: Main DailyTracker command
+    usage: /dat <stats|top|history|downtime|reload> [args...]
+    permission: dailytracker.use
 
 permissions:
   dailytracker.use:
-    description: Allows player to view their own stats
+    description: Allows viewing own stats
     default: true
   dailytracker.admin:
-    description: Allows player to view others stats and reload plugin
+    description: Allows viewing others' stats and reload plugin
     default: op
   dailytracker.admin.downtime:
-    description: Allows player to view/reset downtime
+    description: Allows managing server downtime
     default: op

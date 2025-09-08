@@ -1,10 +1,55 @@
-# DailyTracker plugin config
+# DailyTracker Configuration
+# Version: 1.0.0
 
-time-format: "xh ym zs"
+# Time format for display (12h or 24h)
+time-format: "24h"
+
+# Track AFK time (true = exclude AFK time, false = include AFK time)
 track-afk: true
-auto-save-interval: 300 # seconds
-debug: false
-bStats: true
 
+# Auto-save interval in minutes
+auto-save-interval: 5
+
+# Debug mode
+debug: false
+
+# Enable bStats metrics
+bstats: true
+
+# Monthly reset day for players (1-28, day of month when monthly stats reset)
 monthly-player-reset-day: 1
-monthly-downtime-start-date: "2025-01-01"
+
+# Start date for monthly downtime tracking (YYYY-MM-DD format)
+monthly-downtime-start-date: "2024-01-01"
+
+# AFK detection settings
+afk:
+  # Time in seconds before a player is considered AFK
+  timeout: 300
+  # Check interval in seconds
+  check-interval: 30
+
+# Database settings
+database:
+  # Database type (sqlite, mysql)
+  type: "sqlite"
+  # SQLite file name (only used if type is sqlite)
+  file: "dailytracker.db"
+  # MySQL settings (only used if type is mysql)
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "dailytracker"
+    username: "root"
+    password: ""
+
+# Messages
+messages:
+  no-permission: "&cYou don't have permission to use this command!"
+  player-not-found: "&cPlayer not found!"
+  invalid-date: "&cInvalid date format! Use YYYY-MM-DD"
+  stats-header: "&6&l=== Daily Tracker Stats ==="
+  downtime-reset-confirm: "&cType '/dat downtime reset confirm' to reset downtime tracking."
+  downtime-reset-success: "&aDowntime tracking has been reset!"
+  config-reloaded: "&aConfiguration reloaded successfully!"
+  data-loading: "&7Loading your statistics..."

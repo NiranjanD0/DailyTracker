@@ -1,26 +1,116 @@
-gui:
-  title: "&6&lPlayer Stats"
+# GUI Configuration for DailyTracker
+# Version: 1.0.0
+
+stats-gui:
+  title: "&6&lDaily Tracker Stats"
+  size: 54  # Must be multiple of 9 (9, 18, 27, 36, 45, 54)
+  
+  items:
+    # Combined uptime display
+    uptime:
+      slot: 46
+      material: PAPER
+      name: "&6&lYour Uptime"
+      lore:
+        - "&7Daily: &f%dat_uptime_day%"
+        - "&7Weekly: &f%dat_uptime_week%"
+        - "&7Monthly: &f%dat_uptime_month%"
+        - ""
+        - "&7Raw seconds today: &f%dat_uptime_day_raw%"
+    
+    # Refresh button
+    refresh:
+      slot: 50
+      material: ARROW
+      name: "&a&lRefresh"
+      lore:
+        - "&7Click to refresh your statistics"
+    
+    # Close button
+    close:
+      slot: 54
+      material: BARRIER
+      name: "&c&lClose"
+      lore:
+        - "&7Click to close this menu"
+    
+    # Filler items (glass panes)
+    filler:
+      material: BLACK_STAINED_GLASS_PANE
+      name: " "
+      slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 27, 35, 36, 44, 45, 47, 48, 49, 51, 52, 53]
+    
+    # Daily stats
+    daily-stats:
+      slot: 20
+      material: CLOCK
+      name: "&e&lDaily Stats"
+      lore:
+        - "&7Today's uptime: &f%dat_uptime_day%"
+        - "&7Raw seconds: &f%dat_uptime_day_raw%"
+        - ""
+        - "&7Resets at midnight"
+    
+    # Weekly stats
+    weekly-stats:
+      slot: 22
+      material: COMPASS
+      name: "&b&lWeekly Stats"
+      lore:
+        - "&7This week's uptime: &f%dat_uptime_week%"
+        - "&7Raw seconds: &f%dat_uptime_week_raw%"
+        - ""
+        - "&7Resets every Sunday"
+    
+    # Monthly stats
+    monthly-stats:
+      slot: 24
+      material: BOOK
+      name: "&d&lMonthly Stats"
+      lore:
+        - "&7This month's uptime: &f%dat_uptime_month%"
+        - "&7Raw seconds: &f%dat_uptime_month_raw%"
+        - ""
+        - "&7Resets on the 1st of each month"
+
+# Top players GUI
+top-gui:
+  title: "&6&lTop Players - %period%"
   size: 54
-
-items:
-  # Combined uptime display
-  46:
-    material: PAPER
-    display-name: "&a&lPlayer Uptime"
-    lore:
-      - "&eDaily: &f%dat_uptime_day% &e| Weekly: &f%dat_uptime_week% &e| Monthly: &f%dat_uptime_month%"
-      - "&7AFK time excluded"
-
-  # Refresh button
-  50:
-    material: ARROW
-    display-name: "&6Refresh Stats"
-    lore:
-      - "&7Click to refresh your stats"
-
-  # Close button
-  54:
-    material: BARRIER
-    display-name: "&cClose GUI"
-    lore:
-      - "&7Click to close the stats menu"
+  
+  items:
+    # Player head template (positions 10-16, 19-25, 28-34)
+    player-head:
+      material: PLAYER_HEAD
+      name: "&6%position%. &f%player%"
+      lore:
+        - "&7Uptime: &f%uptime%"
+        - "&7Raw seconds: &f%uptime_raw%"
+    
+    # Navigation buttons
+    previous:
+      slot: 48
+      material: ARROW
+      name: "&a&lPrevious Page"
+      lore:
+        - "&7Go to previous page"
+    
+    next:
+      slot: 50
+      material: ARROW
+      name: "&a&lNext Page"
+      lore:
+        - "&7Go to next page"
+    
+    back:
+      slot: 49
+      material: BARRIER
+      name: "&c&lBack"
+      lore:
+        - "&7Return to main menu"
+    
+    # Filler items
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: " "
+      slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 27, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 51, 52, 53]
