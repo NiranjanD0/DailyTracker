@@ -17,7 +17,7 @@ permissions:
     default: true
   dailytracker.admin:
     description: Allows player to view others stats and reload plugin
-    default: true
+    default: op
   dailytracker.admin.downtime:
     description: Allows player to view/reset downtime
-    default: true
+    default: op
