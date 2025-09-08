@@ -1,0 +1,10 @@
+# DailyTracker plugin config
+
+time-format: "xh ym zs"
+track-afk: true
+auto-save-interval: 300 # seconds
+debug: false
+bStats: true
+
+monthly-player-reset-day: 1
+monthly-downtime-start-date: "2025-01-01"
