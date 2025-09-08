@@ -1,26 +1,26 @@
 gui:
-  title: "§6§lPlayer Stats"
+  title: "&6&lPlayer Stats"
   size: 54
 
 items:
   # Combined uptime display
   46:
     material: PAPER
-    display-name: "§a§lPlayer Uptime"
+    display-name: "&a&lPlayer Uptime"
     lore:
-      - "§eDaily: §f%dat_uptime_day% §e| Weekly: §f%dat_uptime_week% §e| Monthly: §f%dat_uptime_month%"
-      - "§7AFK time excluded"
+      - "&eDaily: &f%dat_uptime_day% &e| Weekly: &f%dat_uptime_week% &e| Monthly: &f%dat_uptime_month%"
+      - "&7AFK time excluded"
 
   # Refresh button
   50:
     material: ARROW
-    display-name: "§6Refresh Stats"
+    display-name: "&6Refresh Stats"
     lore:
-      - "§7Click to refresh your stats"
+      - "&7Click to refresh your stats"
 
   # Close button
   54:
     material: BARRIER
-    display-name: "§cClose GUI"
+    display-name: "&cClose GUI"
     lore:
-      - "§7Click to close the stats menu"
+      - "&7Click to close the stats menu"
