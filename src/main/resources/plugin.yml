@@ -9,7 +9,7 @@ commands:
   dat:
     description: Main command for DailyTracker
     usage: /<command> <subcommand>
-    aliases: [dailytracker, dt]
+    aliases: [dailytracker]
 
 permissions:
   dailytracker.use:
