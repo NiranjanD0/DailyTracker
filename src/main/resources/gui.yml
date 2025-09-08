@@ -1,21 +1,26 @@
-# GUI layout configuration for DailyTracker
-
-gui-title: "Daily Tracker Stats"
-size: 54
+gui:
+  title: "§6§lPlayer Stats"
+  size: 54
 
 items:
-  daily-uptime:
-    slot: 46
+  # Combined uptime display
+  46:
     material: PAPER
-    display-name: "Daily Uptime"
+    display-name: "§a§lPlayer Uptime"
     lore:
-      - "%dailytracker_uptime_day%"
-      - "AFK excluded"
+      - "§eDaily: §f%dat_uptime_day% §e| Weekly: §f%dat_uptime_week% §e| Monthly: §f%dat_uptime_month%"
+      - "§7AFK time excluded"
 
-  monthly-uptime:
-    slot: 52
-    material: CLOCK
-    display-name: "Monthly Uptime"
+  # Refresh button
+  50:
+    material: ARROW
+    display-name: "§6Refresh Stats"
     lore:
-      - "%dailytracker_uptime_month%"
-      - "AFK excluded"
+      - "§7Click to refresh your stats"
+
+  # Close button
+  54:
+    material: BARRIER
+    display-name: "§cClose GUI"
+    lore:
+      - "§7Click to close the stats menu"
