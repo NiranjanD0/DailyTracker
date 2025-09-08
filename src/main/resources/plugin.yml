@@ -6,7 +6,7 @@ api-version: 1.21
 softdepend: [PlaceholderAPI, Essentials]
 
 commands:
-  dup:
+  dat:
     description: Main command for DailyTracker
     usage: /<command> <subcommand>
     aliases: [dailytracker, dt]
